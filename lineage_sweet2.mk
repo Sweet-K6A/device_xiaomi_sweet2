@@ -14,6 +14,12 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Blackiron Flags
+WITH_GMS := true
+TARGET_ENABLE_BLUR := false
+BLACKIRON_BUILDTYPE := UNOFFICIAL
+BLACKIRON_MAINTAINER := Shakib (@Shakib_BD)
+
 PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := sweet2
 PRODUCT_MANUFACTURER := Xiaomi
