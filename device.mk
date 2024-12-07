@@ -71,7 +71,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-aosp
 
 # Overlay-RRO
 PRODUCT_PACKAGES += \
@@ -100,3 +100,10 @@ PRODUCT_PACKAGES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/sweet2/sweet2-vendor.mk)
+
+# Remove Unwanted Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
+# Signed Build
+# -include vendor/lineage-priv/keys/keys.mk
